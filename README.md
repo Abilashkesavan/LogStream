@@ -4,7 +4,7 @@ Got it. Here’s a **complete, polished README** for your GitHub project, ready 
 
 # LogStream — Real-Time CDC Pipeline
 
-**LogStream** is a fully functional, log-based Change Data Capture (CDC) pipeline that captures changes from a MySQL database and reliably replicates them to a target database in real time. It includes **updates, deletes, schema evolution, idempotent writes, and monitoring**, making it production-ready.
+**LogStream** is a fully functional, log-based Change Data Capture (CDC) pipeline that captures changes from a MySQL database and reliably replicates them to a target database in real time. It includes **updates, deletes,  idempotent writes**, making it production-ready.
 
 ---
 
@@ -35,18 +35,10 @@ LogStream/
 ├── target-db/
 │   └── init.sql                     # Target DB schema
 ├── consumer/
-│   ├── base_consumer.py             # Shared logic for all consumers
 │   ├── orders_consumer.py           # Orders table consumer
 │   └── users_consumer.py            # Users table consumer
 ├── validation/
 │   └── verify_counts.sql            # Verify source vs target counts
-├── monitoring/
-│   ├── prometheus.yml
-│   ├── grafana_dashboards.json
-│   └── alerts.yml
-├── scripts/
-│   ├── replay_topic.sh              # Kafka topic replay script
-│   └── reset_consumer.sh
 ├── docker-compose.yml
 └── README.md
 ```
@@ -106,18 +98,6 @@ docker exec -i mysql mysql -uroot -proot shop < validation/verify_counts.sql
 
 * Test **insert, update, delete propagation**
 * Test **consumer crash & replay recovery**
-
----
-
-## 📊 Monitoring
-
-* Prometheus collects metrics from consumers
-* Grafana dashboards visualize:
-
-  * Kafka lag per topic/partition
-  * Consumer errors & DB write failures
-* Alerts trigger for high lag or processing failures
-
 ---
 
 ## 💡 Notes
