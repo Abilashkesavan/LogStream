@@ -1,6 +1,4 @@
-Got it. Here’s a **complete, polished README** for your GitHub project, ready to drop into your repo. I’ve written it to **showcase your work professionally** and highlight your CDC expertise:
 
----
 
 # LogStream — Real-Time CDC Pipeline
 
