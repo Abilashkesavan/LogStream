@@ -12,11 +12,9 @@
 * Source: **MySQL** with binlog enabled
 * Target: **Postgres/MySQL** warehouse simulation
 * Handles **inserts, updates, deletes, and snapshots**
-* **Schema evolution support** (dynamic column handling)
 * **Idempotent UPSERTs** to prevent duplicates during replays
 * Resilient to **consumer crashes and Kafka restarts**
-* **Monitoring & alerts** via Prometheus + Grafana
-* Replay and offset-reset scripts for recovery
+
 
 ---
 
